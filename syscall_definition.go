@@ -52,9 +52,10 @@ func process_csv_line_by_line( filePath string, column string, value string ) {
 }
 
 func main() {
-    if len(os.Args) < 3 {
-        log.Fatal("Too few arguments.")
+    if len(os.Args) != 4 {
+        log.Fatal("Invalid number of arguments.")
     }
+
     filename := os.Args[1]
     column   := os.Args[2]
     value    := os.Args[3]
