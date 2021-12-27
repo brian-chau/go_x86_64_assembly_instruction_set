@@ -8,8 +8,8 @@ Example usage:
 
 To find the syscall definition for the "open" syscall:
 
-> ./csv_handler x86_64_syscalls.csv syscall_name open
+> ./syscall_definition x86_64_syscalls.csv syscall_name open
 
 To find the syscall definition for the "write" syscall:
 
-> ./csv_handler x86_64_syscalls.csv syscall_name write
+> ./syscall_definition x86_64_syscalls.csv syscall_name write
