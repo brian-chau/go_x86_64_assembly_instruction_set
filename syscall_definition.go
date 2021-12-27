@@ -52,12 +52,13 @@ func process_csv_line_by_line( filePath string, column string, value string ) {
 }
 
 func main() {
-    if len(os.Args) != 4 {
+    if len(os.Args) != 2 {
         log.Fatal("Invalid number of arguments.")
     }
 
-    filename := os.Args[1]
-    column   := os.Args[2]
-    value    := os.Args[3]
+    filename := "x86_syscalls.csv"
+    //filename := "x86_64_syscalls.csv"
+    column   := "syscall_name"
+    value    := os.Args[1]
     process_csv_line_by_line( filename, column, value )
 }
