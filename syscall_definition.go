@@ -6,6 +6,7 @@ import (
     "io"
     "log"
     "os"
+    "strings"
 )
 
 func process_csv_line_by_line( filePath string, column string, value string ) {
@@ -34,14 +35,14 @@ func process_csv_line_by_line( filePath string, column string, value string ) {
                 header[record[i]] = i
             }
         } else {
-            if record[header[column]] == value {
+            if strings.Contains(record[header[column]], value) {
                 for h, i := range header {
                     results[i] = fmt.Sprintf("%-15s: %v",h, record[i])
                 }
                 for _, i := range results {
                     fmt.Println(i)
                 }
-                return
+                fmt.Println("-----")
             }
         }
     }
