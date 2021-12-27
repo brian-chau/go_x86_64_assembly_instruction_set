@@ -20,6 +20,7 @@ func process_csv_line_by_line( filePath string, column string, value string ) {
     is_first_line := true
     header := make(map[string]int)
     var results [9]string // One index for each column
+    fmt.Println("-----")
 
     for {
         record, err := r.Read()
