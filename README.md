@@ -8,8 +8,8 @@ Example usage:
 
 To find the syscall definition for the "open" syscall:
 
-> ./syscall_x86 open
+> ./syscalls_x86 open
 
 To find the syscall definition for the "write" syscall:
 
-> ./syscall_x86_64 write
+> ./syscalls_x86_64 write
